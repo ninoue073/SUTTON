@@ -1,0 +1,431 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 14px;
+    line-height: 0;
+    color: #000;
+    font-family: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+body a {
+    text-decoration: none;
+}
+
+
+/*ヘッダー*/
+header {
+    background-color: #fffc19;
+    line-height: 1.6;
+}
+
+.header_group {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+/*ロゴ*/
+
+
+
+
+
+/*メニュー*/
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.global_menu {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
+}
+
+.global_menu li {
+    padding: .5em .8em;
+}
+
+.global_menu a {
+    color: #000;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+/*申込みボタン*/
+.contact_btn {
+    color: #fff;
+    background-color: #0dabff;
+    padding: .5em 2em;
+    font-size: 1em;
+}
+
+.contact_btn:hover {
+    color: #fff;
+    background: #0995df;
+}
+
+/*メイン*/
+main {
+    line-height: 1.6;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/*---------TOP----------*/
+.top_content {
+    background-color: #fffc19;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 100px 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/*背景 円*/
+.circle_1 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    top: 50px;
+    right: 200px;
+    z-index: 2;
+}
+
+.top_txt {
+    z-index: 3;
+}
+
+#top_message {
+    font-size: 2em;
+    font-weight: bold;
+    padding-left: 20vw;
+    padding-bottom: 3vw;
+}
+
+#top_ttl {
+    font-size: 1em;
+    font-weight: bold;
+    width: 33vw;
+    text-align: right;
+}
+
+#top_sub {
+    font-size: .8em;
+    text-align: right;
+    width: 31.4vw;
+}
+
+.under_line {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    width: 33vw;
+}
+
+.under_line::after {
+    display: inline-block;
+    content: " ";
+    width: 1vw;
+}
+
+#top_img {
+    padding-right: 20vw;
+    z-index: 3;
+}
+
+/*----------スットンとは---------*/
+.about {
+    background-color: #f3f3f3;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.content_ttl {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.under_bold {
+    border-bottom: 8px solid #000;
+    width: 8em;
+    display: inline-block;
+    text-align: center;
+}
+
+.about_group {
+    margin: 50px 0;
+}
+
+/*スットン01~04*/
+.about_item {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 400px;
+
+}
+
+/*背景 数字*/
+.numbers {
+    position: absolute;
+    font-size: 10em;
+    color: #fff;
+    top: -100px;
+    left: 50px;
+}
+
+.about_box {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    width: 100%;
+}
+
+.about_catch {
+    font-size: 2em;
+    color: #000;
+    font-weight: bold;
+}
+
+.about_inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*詳細ボタン*/
+.about_btn {
+    font-size: 1.5em;
+    background-color: #fffc19;
+    color: #000;
+    display: block;
+    width: 10em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*----------お客さまの声----------*/
+.review {
+    background-color: #fffc19;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+#review_note {
+    text-align: center;
+    display: block;
+    color: #000;
+    font-size: .8em;
+    padding: 30px 0;
+}
+
+
+/*お客さまの声 メイン*/
+.review_large {
+    display: flex;
+    justify-content: space-around;
+    margin: 80px 0 350px;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/*背景 円*/
+.circle_2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #fff;
+    top: -60px;
+    left: 200px;
+    z-index: 2;
+}
+
+#large_img {
+    z-index: 3;
+}
+
+.large_inner {
+    z-index: 3;
+}
+
+#large_ttl {
+    font-size: 2em;
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+#large_personal {
+    font-size: 1.5em;
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+#large_txt {
+    font-size: 1em;
+    color: #000;
+}
+
+/*お客さまの声 その他1~3*/
+.review_more {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 50px;
+}
+
+.review_small {
+    background-color: #fff;
+    padding: 20px 20px 10px;
+    margin: 0 10px;
+}
+
+#small_ttl {
+    font-size: 1.5em;
+    color: #000;
+    font-weight: bold;
+}
+
+.small_inner {
+    display: flex;
+    justify-content: space-around;
+}
+
+#small_personal {
+    font-size: 1em;
+    color: #000;
+    font-weight: bold;
+}
+
+#small_txt {
+    font-size: .8em;
+    color: #000;
+}
+
+.review_btn {
+    display: block;
+    text-align: right;
+    color: #000;
+    font-size: .8em;
+}
+
+/*----------ニュース---------*/
+.news {
+    background-color: #f3f3f3;
+    padding-top: 50px;
+    overflow: hidden;
+}
+
+.news_box {
+    background: #fff;
+    margin: 50px 100px;
+}
+
+.news_inner {
+    padding: 50px 50px 0;
+}
+
+.news_item {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #000;
+    margin-bottom: 50px;
+}
+
+.news_btn {
+    display: block;
+    text-align: right;
+    color: #000;
+    padding: 0 50px 30px;
+}
+
+/*----------アクセス----------*/
+.access {
+    background-color: #f3f3f3;
+    padding-top: 50px;
+}
+
+#access_txt {
+    text-align: center;
+    padding: 50px 0;
+    margin-bottom: 400px;
+}
+
+/*----------not yet open----------*/
+.not_yet {
+    background-color: #f3f3f3;
+    padding: 300px 0;
+}
+
+.not_yet p {
+    text-align: center;
+}
+
+/*フッター*/
+footer {
+    background-color: #fffc19;
+    line-height: 1.6;
+    padding-top: 30px;
+}
+
+.footer_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_wrap a {
+    color: #000;
+    font-size: .8em;
+}
+
+.footer_wrap::before {
+    content: '';
+    display: block;
+    height: .8em;
+    width: 19.2em;
+}
+
+/*お問い合わせなど*/
+.footer_right {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
+}
+
+.footer_right li {
+    padding: 0 1.5em;
+}
+
+#line {
+    border-right: 1px solid #000;
+}
+
+/*コピー*/
+small p {
+    text-align: center;
+    font-size: .3em;
+    padding: 2em 0;
+}
