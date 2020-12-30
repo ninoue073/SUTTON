@@ -117,7 +117,6 @@ input {
 }
 
 @media screen and (max-width: 959px) {
-
     /* 959px以下に適用されるCSS（タブレット用） */
 
     .tab_menu {
@@ -340,6 +339,7 @@ main {
     padding: 50px 0 50px 140px;
     line-height: 2;
     letter-spacing: .1em;
+    z-index: 5;
 }
 
 #top_ttl {
@@ -377,6 +377,50 @@ main {
     position: absolute;
     top: 160px;
     right: 170px;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .top_content {
+        height: 400px;
+        padding: 90px 0 0;
+    }
+
+    /*背景 円*/
+    .circle_1 {
+        width: 400px;
+        height: 400px;
+        top: 60px;
+        right: 30px;
+    }
+
+    #top_message {
+        font-size: 2em;
+        padding: 0 0 40px 60px;
+    }
+
+    #top_ttl {
+        width: 30px;
+    }
+
+    #top_sub {
+        width: 235px;
+    }
+
+    .under_line {
+        width: 255px;
+    }
+
+    #top_img {
+        width: 300px;
+        top: 130px;
+        right: 80px;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
 }
 
 /*----------スットンとは---------*/
@@ -473,6 +517,50 @@ main {
     border-radius: 10px;
 }
 
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .about {
+        padding: 80px 0 0;
+    }
+
+    /*スットン01~04*/
+    .about_item {
+        margin-bottom: 900px;
+    }
+
+    /*背景 数字*/
+    .numbers {
+        top: -200px;
+        left: 50px;
+    }
+
+    .about_box {
+        display: flex;
+        flex-direction: column-reverse;
+        left: 10%;
+        width: 100%;
+    }
+
+    .about_txt {
+        padding-top: 10px;
+    }
+
+    .about_ing {
+        width: 600px;
+        padding: 0 15%;
+    }
+
+    #about_img {
+        width: 600px;
+        padding: 0 25%;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+}
+
 /*----------お客さまの声----------*/
 .review {
     background-color: #fffc19;
@@ -486,6 +574,8 @@ main {
     color: #000;
     font-size: .8em;
     padding: 30px 0;
+    z-index: 5;
+    position: relative;
 }
 
 /*お客さまの声 メイン*/
@@ -552,7 +642,7 @@ main {
 
 .review_small {
     background-color: #fff;
-    padding: 50px 40px 20px;
+    padding: 40px 30px 20px;
     margin: 0 10px;
     width: 400px;
     height: 400px;
@@ -566,20 +656,19 @@ main {
 .small_inner {
     display: flex;
     justify-content: flex-start;
-    height: 100px;
+    height: 130px;
 }
 
 .small_img {
     width: 120px;
     height: 120px;
     padding: 10px 0 0;
-    text-align: left;
 }
 
 .small_personal {
     font-size: 1em;
     color: #000;
-    line-height: 100px;
+    line-height: 130px;
 }
 
 .small_txt {
@@ -594,6 +683,67 @@ main {
     text-align: right;
     color: #000;
     font-size: .8em;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+
+    /*お客さまの声 メイン*/
+    .review_large {
+        display: flex;
+        margin: 0;
+    }
+
+    /*背景 円*/
+    .circle_2 {
+        width: 400px;
+        height: 400px;
+        top: 130px;
+        left: 20px;
+    }
+
+    #large_img {
+        width: 300px;
+        padding-left: 20px;
+    }
+
+    .large_inner {
+        width: 450px;
+        padding: 20px 20px 50px 20px;
+    }
+
+    /*お客さまの声 その他1~3*/
+    .review_small {
+        padding: 20px 8px 10px;
+        margin: 0 10px;
+        width: 230px;
+        height: 450px;
+    }
+
+    #small_ttl {
+        font-size: 1em;
+    }
+
+    .small_inner {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 80px 0 0;
+    }
+
+    .small_img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px;
+    }
+
+    .small_personal {
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
 }
 
 /*----------ニュース---------*/
