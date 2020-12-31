@@ -22,30 +22,7 @@ body a {
     text-decoration: none;
 }
 
-
-
-
-
-@media screen and (max-width: 959px) {
-    /* 959px以下に適用されるCSS（タブレット用） */
-}
-
-@media screen and (max-width: 559px) {
-    /* 559px以下に適用されるCSS（スマホ用） */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/*ヘッダー*/
+/*----------ヘッダー----------*/
 header {
     background-color: #fffc19;
     line-height: 1.6;
@@ -61,11 +38,33 @@ header {
     height: 100px;
 }
 
+@media screen and (max-width: 559px) {
+
+    /* 559px以下に適用されるCSS（スマホ用） */
+    .header_group {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        height: 60px;
+    }
+}
+
 /*ロゴ*/
 .header_group img {
     padding: 5px;
     width: 300px;
     height: auto;
+}
+
+@media screen and (max-width: 559px) {
+
+    /* 559px以下に適用されるCSS（スマホ用） */
+    /*ロゴ*/
+    .header_group img {
+        padding-right: .5em;
+        width: 25%;
+        height: auto;
+    }
 }
 
 /*メニュー*/
@@ -87,7 +86,7 @@ header {
 .global_menu a {
     color: #000;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /*申込みボタン*/
@@ -100,6 +99,7 @@ header {
     letter-spacing: .1em;
     line-height: 30px;
     margin: 15px 0;
+    font-weight: 500;
 }
 
 .contact_btn a:hover {
@@ -157,6 +157,7 @@ input {
         left: 50%;
         margin: 0;
         padding: 0;
+        width: 100%;
         list-style-type: none;
         transition: all .3s ease-in-out;
         -webkit-transform: translateX(-50%);
@@ -198,7 +199,7 @@ input {
         padding: .5em 2em;
         font-size: 1em;
         display: block;
-        margin-right: 50px;
+        margin-right: 40px;
         letter-spacing: .1em;
     }
 
@@ -294,8 +295,24 @@ input {
         color: #000;
         text-shadow: 1px 1px 2px #fff;
     }
+
+    /*ハンバーガー*/
+    .fullscreenmenu .hamburger {
+        top: 12px;
+        right: 10px;
+    }
 }
 
+@media screen and (max-width: 559px) {
+
+    /* 559px以下に適用されるCSS（スマホ用） */
+    /*申込みボタン*/
+    .contact_btn a {
+        line-height: 2em;
+        margin: .6em 2.5em;
+        padding: .5em;
+    }
+}
 
 /*メイン*/
 /*---------TOP----------*/
@@ -325,12 +342,14 @@ main {
     border-radius: 50%;
     background: #f3f3f3;
     top: 90px;
-    right: 130px;
+    right: 140px;
     z-index: 2;
 }
 
 .top_txt {
-    z-index: 3;
+    z-index: 5;
+    width: 100%;
+    position: relative;
 }
 
 #top_message {
@@ -371,12 +390,17 @@ main {
     width: 10px;
 }
 
-#top_img {
+.img_outer {
     z-index: 3;
-    width: 450px;
+    width: 35%;
     position: absolute;
     top: 160px;
     right: 170px;
+}
+
+#top_img {
+    width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width: 959px) {
@@ -398,6 +422,7 @@ main {
     #top_message {
         font-size: 2em;
         padding: 0 0 40px 60px;
+        line-height: 2;
     }
 
     #top_ttl {
@@ -412,15 +437,52 @@ main {
         width: 255px;
     }
 
-    #top_img {
-        width: 300px;
-        top: 130px;
-        right: 80px;
+    .img_outer {
+        width: 40%;
+        top: 120px;
+        right: 70px;
     }
 }
 
 @media screen and (max-width: 559px) {
     /* 559px以下に適用されるCSS（スマホ用） */
+
+    .top_content {
+        height: 460px;
+        padding: 30px 0;
+        bottom: 0;
+    }
+
+    /*背景 円*/
+    .circle_1 {
+        width: 250px;
+        height: 250px;
+        top: 220px;
+        right: 20px;
+    }
+
+    #top_message {
+        font-size: 1.7em;
+        padding: 0 0 20px 20px;
+    }
+
+    #top_ttl {
+        width: 30px;
+    }
+
+    #top_sub {
+        width: 195px;
+    }
+
+    .under_line {
+        width: 215px;
+    }
+
+    .img_outer {
+        width: 60%;
+        top: 260px;
+        right: 40px;
+    }
 }
 
 /*----------スットンとは---------*/
@@ -432,7 +494,7 @@ main {
 
 .content_ttl {
     font-size: 1.5em;
-    font-weight: 500;
+    font-weight: 600;
     color: #000;
     text-align: center;
     position: relative;
@@ -455,7 +517,7 @@ main {
     position: relative;
     top: 0;
     left: 0;
-    margin-bottom: 600px;
+    margin-bottom: 200px;
 }
 
 /*背景 数字*/
@@ -463,19 +525,18 @@ main {
     position: absolute;
     font-size: 15em;
     color: #fff;
-    top: -170px;
+    top: -140px;
     left: 50px;
-    font-family: 'Impact';
+    font-family: 'Barlow Condensed', 'DIN Condensed', 'Tahoma';
+    z-index: 1;
 }
 
 .about_box {
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    padding-right: 50px;
+    z-index: 5;
 }
 
 .about_catch {
@@ -492,27 +553,27 @@ main {
     padding-top: 30px;
 }
 
-.about_ing {
+.about_img {
     width: 400px;
     height: auto;
-    padding-right: 50px;
+    margin-right: 50px;
 }
 
 #about_img {
-    width: 400px;
+    width: 300px;
     height: auto;
-    padding: 0 50px;
+    margin: 0 50px;
 }
 
 /*詳細ボタン*/
 .about_btn {
-    font-size: 1.5em;
+    font-size: 1em;
     background-color: #fffc19;
     color: #000;
     display: block;
-    width: 10em;
-    height: 2em;
-    line-height: 2em;
+    width: 12em;
+    height: 3em;
+    line-height: 3em;
     text-align: center;
     border-radius: 10px;
 }
@@ -526,39 +587,99 @@ main {
 
     /*スットン01~04*/
     .about_item {
-        margin-bottom: 900px;
+        margin-bottom: 120px;
     }
 
     /*背景 数字*/
     .numbers {
-        top: -200px;
+        top: -120px;
         left: 50px;
     }
 
     .about_box {
         display: flex;
         flex-direction: column-reverse;
-        left: 10%;
         width: 100%;
+    }
+
+    .about_inner {
+        margin: 0 auto;
+    }
+
+    .about_catch {
+        text-align: center;
     }
 
     .about_txt {
         padding-top: 10px;
     }
 
-    .about_ing {
+    .about_img {
         width: 600px;
         padding: 0 15%;
+        margin-right: 0;
+        margin: 0 auto;
     }
 
     #about_img {
-        width: 600px;
-        padding: 0 25%;
+        width: 300px;
+        margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 559px) {
     /* 559px以下に適用されるCSS（スマホ用） */
+
+    .about {
+        padding-top: 50px;
+    }
+
+    .about_group {
+        margin: 120px 0 50px;
+    }
+
+    /*スットン01~04*/
+    .about_item:last-child {
+        margin-bottom: 0;
+    }
+
+    /*背景 数字*/
+    .numbers {
+        font-size: 10em;
+        top: -130px;
+        left: 30px;
+    }
+
+    .about_catch {
+        font-size: 1.5em;
+        font-weight: 600;
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    .about_txt {
+        width: 95%;
+        padding-top: 0;
+        margin: 0 auto;
+    }
+
+    .about_img {
+        width: 300px;
+    }
+
+    #about_img {
+        width: 200px;
+    }
+
+    /*詳細ボタン*/
+    .about_btn {
+        margin: 0 auto;
+    }
+
+    /* 改行クリア*/
+    .br_none {
+        display: none;
+    }
 }
 
 /*----------お客さまの声----------*/
@@ -637,7 +758,11 @@ main {
 .review_more {
     display: flex;
     justify-content: space-between;
-    margin: 0 10px 50px;
+    margin: 0 auto 50px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .review_small {
@@ -645,7 +770,7 @@ main {
     padding: 40px 30px 20px;
     margin: 0 10px;
     width: 400px;
-    height: 400px;
+    height: auto;
 }
 
 #small_ttl {
@@ -656,19 +781,20 @@ main {
 .small_inner {
     display: flex;
     justify-content: flex-start;
-    height: 130px;
+    height: 8em;
+    padding-bottom: 20px;
+    margin: 0 auto;
 }
 
 .small_img {
-    width: 120px;
-    height: 120px;
-    padding: 10px 0 0;
+    width: 130px;
+    height: auto;
 }
 
 .small_personal {
     font-size: 1em;
     color: #000;
-    line-height: 130px;
+    line-height: 8em;
 }
 
 .small_txt {
@@ -685,10 +811,15 @@ main {
     font-size: .8em;
 }
 
+/*スライダー*/
+.prev,
+.next {
+    margin: auto 0
+}
+
 @media screen and (max-width: 959px) {
+
     /* 959px以下に適用されるCSS（タブレット用） */
-
-
     /*お客さまの声 メイン*/
     .review_large {
         display: flex;
@@ -715,26 +846,20 @@ main {
 
     /*お客さまの声 その他1~3*/
     .review_small {
-        padding: 20px 8px 10px;
+        padding: 30px 10px 10px;
         margin: 0 10px;
-        width: 230px;
-        height: 450px;
-    }
-
-    #small_ttl {
-        font-size: 1em;
+        width: 25%;
+        height: auto;
     }
 
     .small_inner {
         display: flex;
         flex-direction: column-reverse;
-        margin: 80px 0 0;
+        margin: 100px 0 0;
     }
 
     .small_img {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 20px;
+        margin: 0 auto;
     }
 
     .small_personal {
@@ -744,6 +869,73 @@ main {
 
 @media screen and (max-width: 559px) {
     /* 559px以下に適用されるCSS（スマホ用） */
+
+    .review {
+        padding-top: 50px;
+    }
+
+    /*お客さまの声 メイン*/
+    .review_large {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    /*背景 円*/
+    .circle_2 {
+        width: 250px;
+        height: 250px;
+        top: -10px;
+        left: 110px;
+    }
+
+    #large_ttl {
+        font-size: 1.5em;
+        padding-bottom: 20px;
+        font-weight: 600;
+    }
+
+    #large_personal {
+        font-size: 1.5em;
+        padding-bottom: 20px;
+    }
+
+    #large_img {
+        width: 200px;
+        padding-left: 0;
+        margin: 0 auto;
+    }
+
+    .large_inner {
+        width: 95%;
+        padding: 30px 0;
+        margin: 0 auto;
+    }
+
+    /*お客さまの声 その他1~3*/
+    .review_more {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .review_small {
+        padding: 20px 8px 10px;
+        margin: 0 30px 20px;
+    }
+
+    /*スライダー*/
+    .prev {
+        position: absolute;
+        top: 200px;
+        left: 5px;
+    }
+
+    .next {
+        position: absolute;
+        top: 200px;
+        right: 5px;
+    }
 }
 
 /*----------ニュース---------*/
@@ -755,7 +947,7 @@ main {
 
 .news_box {
     background: #fff;
-    margin: 50px 100px;
+    margin: 50px 150px;
 }
 
 .news_inner {
@@ -781,6 +973,34 @@ main {
     padding: 0 50px 30px;
 }
 
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .news {
+        padding-top: 50px;
+    }
+
+    .news_box {
+        margin: 30px 10px;
+    }
+
+    .news_inner {
+        padding: 40px 20px 0;
+    }
+
+    .news_item {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .news_item dt {
+        padding: 0 0 5px;
+    }
+}
+
 /*----------アクセス----------*/
 .access {
     background-color: #f3f3f3;
@@ -793,6 +1013,26 @@ main {
     margin-bottom: 400px;
 }
 
+#map {
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .access {
+        background-color: #f3f3f3;
+        padding-top: 50px;
+    }
+
+    #access_txt {
+        text-align: center;
+        padding: 30px 0;
+        margin-bottom: 400px;
+    }
+}
+
 /*----------not yet open----------*/
 .not_yet {
     background-color: #f3f3f3;
@@ -803,7 +1043,7 @@ main {
     text-align: center;
 }
 
-/*フッター*/
+/*----------フッター----------*/
 footer {
     background-color: #fffc19;
     line-height: 1.6;
@@ -845,6 +1085,41 @@ footer {
 
 #line {
     border-right: 1px solid #000;
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .footer_wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer_wrap::before {
+        display: none:
+    }
+
+    .footer_wrap img {
+        width: 100px;
+        height: auto;
+    }
+
+    .footer_logo {
+        margin: 0 auto;
+    }
+
+    /*お問い合わせなど*/
+    .footer_right {
+        margin: 30px auto;
+    }
+
+    .footer_right li {
+        padding: 0 1em;
+    }
+
+    #adjust {
+        padding-right: 1.6em;
+    }
 }
 
 /*コピー*/
