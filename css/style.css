@@ -782,7 +782,7 @@ main {
     display: flex;
     justify-content: flex-start;
     height: 8em;
-    padding-bottom: 20px;
+    padding: 10px;
     margin: 0 auto;
 }
 
