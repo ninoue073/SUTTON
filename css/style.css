@@ -787,14 +787,16 @@ main {
 }
 
 .small_img {
-    width: 130px;
+    width: 80px;
     height: auto;
+    object-position: 0px 0px;
 }
 
 .small_personal {
     font-size: 1em;
     color: #000;
     line-height: 8em;
+    padding-left: 20px;
 }
 
 .small_txt {
@@ -855,7 +857,7 @@ main {
     .small_inner {
         display: flex;
         flex-direction: column-reverse;
-        margin: 100px 0 0;
+        margin: 50px 0 10px;
     }
 
     .small_img {
@@ -947,7 +949,7 @@ main {
 
 .news_box {
     background: #fff;
-    margin: 50px 150px;
+    margin: 50px 150px 0;
 }
 
 .news_inner {
@@ -1005,18 +1007,30 @@ main {
 .access {
     background-color: #f3f3f3;
     padding-top: 80px;
+    overflow: hidden;
 }
 
 #access_txt {
     text-align: center;
     padding: 50px 0;
-    margin-bottom: 400px;
 }
 
-#map {
-    text-decoration: none;
-    color: #000;
+.gmap {
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
 }
+
+.gmap iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
 
 @media screen and (max-width: 559px) {
     /* 559px以下に適用されるCSS（スマホ用） */
@@ -1029,8 +1043,8 @@ main {
     #access_txt {
         text-align: center;
         padding: 30px 0;
-        margin-bottom: 400px;
     }
+
 }
 
 /*----------not yet open----------*/
