@@ -780,23 +780,19 @@ main {
 
 .small_inner {
     display: flex;
-    justify-content: flex-start;
-    height: 8em;
-    padding: 10px;
-    margin: 0 auto;
+    justify-content: space-around;
+    margin: 20px 0;
 }
 
 .small_img {
-    width: 80px;
+    width: 30%;
     height: auto;
-    object-position: 0px 0px;
 }
 
 .small_personal {
     font-size: 1em;
     color: #000;
-    line-height: 8em;
-    padding-left: 20px;
+    margin: auto 0;
 }
 
 .small_txt {
@@ -849,24 +845,18 @@ main {
     /*お客さまの声 その他1~3*/
     .review_small {
         padding: 30px 10px 10px;
-        margin: 0 10px;
-        width: 25%;
-        height: auto;
     }
 
     .small_inner {
         display: flex;
         flex-direction: column-reverse;
-        margin: 50px 0 10px;
     }
 
     .small_img {
         margin: 0 auto;
     }
 
-    .small_personal {
-        line-height: 20px;
-    }
+    .small_personal {}
 }
 
 @media screen and (max-width: 559px) {
@@ -918,7 +908,7 @@ main {
     .review_more {
         display: flex;
         flex-direction: column;
-        margin: 0;
+        margin: 0 auto;
     }
 
     .review_small {
