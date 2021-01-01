@@ -769,7 +769,7 @@ main {
     background-color: #fff;
     padding: 40px 30px 20px;
     margin: 0 10px;
-    width: 400px;
+    width: 30%;
     height: auto;
 }
 
@@ -781,7 +781,7 @@ main {
 .small_inner {
     display: flex;
     justify-content: space-around;
-    margin: 20px 0 10px;
+    margin: 20px 0;
 }
 
 .small_img {
@@ -855,8 +855,6 @@ main {
     .small_img {
         margin: 0 auto;
     }
-
-    .small_personal {}
 }
 
 @media screen and (max-width: 559px) {
