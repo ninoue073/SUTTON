@@ -781,7 +781,7 @@ main {
 .small_inner {
     display: flex;
     justify-content: space-around;
-    margin: 20px 0;
+    margin: 20px 0 10px;
 }
 
 .small_img {
