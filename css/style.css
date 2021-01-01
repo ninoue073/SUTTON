@@ -700,7 +700,7 @@ main {
 .review_large {
     display: flex;
     justify-content: space-between;
-    margin: 30px 80px 100px;
+    margin: 30px 0 100px;
     position: relative;
     top: 0;
     right: 0;
@@ -714,34 +714,34 @@ main {
     height: 500px;
     border-radius: 50%;
     background: #fff;
-    top: -60px;
+    top: -30px;
     left: 160px;
     z-index: 2;
 }
 
 #large_img {
     z-index: 3;
-    width: 500px;
-    padding-left: 50px;
+    width: 40%;
+    margin: auto;
 }
 
 .large_inner {
     z-index: 3;
-    width: 500px;
-    padding: 50px 50px 0 0;
+    width: 40%;
+    margin: auto;
 }
 
 #large_ttl {
     font-size: 2em;
     color: #000;
     letter-spacing: .1em;
-    padding-bottom: 40px;
+    padding-bottom: 2em;
 }
 
 #large_personal {
     font-size: 1.5em;
     color: #000;
-    padding-bottom: 40px;
+    padding-bottom: 2em;
 }
 
 #large_txt {
@@ -818,7 +818,7 @@ main {
     /*お客さまの声 メイン*/
     .review_large {
         display: flex;
-        margin: 0;
+        margin: 50px 10px;
     }
 
     /*背景 円*/
@@ -830,13 +830,19 @@ main {
     }
 
     #large_img {
-        width: 300px;
-        padding-left: 20px;
+        width: 40%;
     }
 
     .large_inner {
-        width: 450px;
-        padding: 20px 20px 50px 20px;
+        width: 55%;
+    }
+
+    #large_ttl {
+        padding-bottom: 1em;
+    }
+
+    #large_personal {
+        padding-bottom: 1em;
     }
 
     /*お客さまの声 その他1~3*/
