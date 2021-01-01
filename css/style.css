@@ -535,7 +535,6 @@ main {
     display: flex;
     justify-content: space-between;
     position: relative;
-    width: 100%;
     z-index: 5;
 }
 
@@ -546,7 +545,7 @@ main {
 }
 
 .about_txt {
-    width: 700px;
+    width: 100%;
     font-size: 1em;
     letter-spacing: .1em;
     line-height: 2em;
@@ -554,13 +553,13 @@ main {
 }
 
 .about_img {
-    width: 400px;
+    width: 30%;
     height: auto;
-    margin-right: 50px;
+    margin: 0 30px;
 }
 
 #about_img {
-    width: 300px;
+    width: 30%;
     height: auto;
     margin: 0 50px;
 }
@@ -615,14 +614,12 @@ main {
     }
 
     .about_img {
-        width: 600px;
-        padding: 0 15%;
-        margin-right: 0;
+        width: 50%;
         margin: 0 auto;
     }
 
     #about_img {
-        width: 300px;
+        width: 50%;
         margin: 0 auto;
     }
 }
@@ -646,7 +643,7 @@ main {
     /*背景 数字*/
     .numbers {
         font-size: 10em;
-        top: -130px;
+        top: -120px;
         left: 30px;
     }
 
@@ -664,11 +661,11 @@ main {
     }
 
     .about_img {
-        width: 300px;
+        width: 60%;
     }
 
     #about_img {
-        width: 200px;
+        width: 50%;
     }
 
     /*詳細ボタン*/
