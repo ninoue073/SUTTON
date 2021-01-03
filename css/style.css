@@ -438,7 +438,7 @@ main {
     /* 559px以下に適用されるCSS（スマホ用） */
 
     .top_content {
-        padding: 15% 0 2%;
+        padding: 15% 0 5%;
     }
 
     .top_inner {
@@ -450,7 +450,7 @@ main {
     .circle_1 {
         width: 250px;
         height: 250px;
-        top: 50%;
+        top: 52%;
         right: 1%;
     }
 
