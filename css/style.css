@@ -138,7 +138,7 @@ input {
     }
 
     /*menuコンテンツ*/
-    .fullscreenmenu .global_menu {
+    .global_menu {
         position: fixed;
         top: 0;
         left: 0;
@@ -151,7 +151,7 @@ input {
         ;
     }
 
-    .fullscreenmenu .global_menu ul {
+    .global_menu ul {
         position: absolute;
         top: 170px;
         left: 50%;
@@ -168,13 +168,13 @@ input {
         flex-direction: column;
     }
 
-    .fullscreenmenu .global_menu ul li {
+    .global_menu li {
         -webkit-transform: translateY(50px);
         transform: translateY(50px);
         opacity: 0;
     }
 
-    .fullscreenmenu .global_menu ul li a {
+    .global_menu a {
         font-size: 2em;
         display: block;
         padding: 5px 0;
@@ -203,43 +203,43 @@ input {
         letter-spacing: .1em;
     }
 
-    .fullscreenmenu .global_menu ul li a:hover {
+    .global_menu a:hover {
         color: #fff;
     }
 
     /*クリックしたらメニューが開閉の動作*/
-    .fullscreenmenu #toggle:checked ~ .global_menu {
+    #toggle:checked ~ .global_menu {
         visibility: visible;
         opacity: 1;
     }
 
-    .fullscreenmenu #toggle:checked ~ .global_menu ul {
+    #toggle:checked ~ .global_menu ul {
         top: 70px;
     }
 
-    .fullscreenmenu #toggle:checked ~ .global_menu ul li {
+    #toggle:checked ~ .global_menu li {
         -webkit-transform: translateY(0px);
         transform: translateY(0px);
         opacity: 1;
     }
 
-    .fullscreenmenu #toggle:checked ~ .global_menu ul li:nth-child(1) {
+    #toggle:checked ~ .global_menu li:nth-child(1) {
         transition: all .3s cubic-bezier(.6, 0, .8, 1.5) .1s;
     }
 
-    .fullscreenmenu #toggle:checked ~ .global_menu ul li:nth-child(2) {
+    #toggle:checked ~ .global_menu li:nth-child(2) {
         transition: all .3s cubic-bezier(.6, 0, .8, 1.5) .2s;
     }
 
-    .fullscreenmenu #toggle:checked ~ .global_menu ul li:nth-child(3) {
+    #toggle:checked ~ .global_menu li:nth-child(3) {
         transition: all .3s cubic-bezier(.6, 0, .8, 1.5) .3s;
     }
 
-    .fullscreenmenu #toggle:checked ~ .global_menu ul li:nth-child(4) {
+    #toggle:checked ~ .global_menu li:nth-child(4) {
         transition: all .3s cubic-bezier(.6, 0, .8, 1.5) .4s;
     }
 
-    .fullscreenmenu #toggle:checked + label.hamburger .bar {
+    #toggle:checked + label.bar {
         background-color: #000;
     }
 
@@ -260,7 +260,7 @@ input {
     }
 
     /*ハンバーガー*/
-    .fullscreenmenu .hamburger {
+    .hamburger {
         position: fixed;
         z-index: 10;
         top: 30px;
@@ -285,7 +285,7 @@ input {
 @media screen and (max-width: 559px) {
 
     /* 559px以下に適用されるCSS（スマホ用） */
-    .fullscreenmenu .global_menu ul li a {
+    .fullscreenmenu a {
         font-size: 1.5em;
         display: block;
         padding: 5px 0;
@@ -297,7 +297,7 @@ input {
     }
 
     /*ハンバーガー*/
-    .fullscreenmenu .hamburger {
+    .hamburger {
         top: 12px;
         right: 10px;
     }
@@ -325,13 +325,11 @@ main {
 .top_content {
     background-color: #fffc19;
     background-size: auto;
-    padding: 10% 0 4%;
-    /*    position: relative;*/
-    /*    right: 0;*/
+    padding: 12% 0 4%;
     z-index: 1;
 }
 
-.top_inner {
+.top_body {
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -343,27 +341,27 @@ main {
     position: relative;
 }
 
-#top_message {
+.top_message {
     font-size: 3em;
     font-weight: 100;
-    padding: 4% 0 6% 20%;
+    padding: 0 0 .6em 3.2em;
     line-height: 2;
     letter-spacing: .1em;
     z-index: 5;
 }
 
-#top_ttl {
+.top_ttl {
     font-size: 1em;
     font-weight: 550;
-    width: 23.5em;
+    width: 22.5em;
     text-align: right;
     letter-spacing: .2em;
 }
 
-#top_sub {
+.top_sub {
     font-size: .8em;
     text-align: right;
-    width: 27.5em;
+    width: 27.9em;
     padding-top: 2px;
     letter-spacing: .2em;
 }
@@ -371,7 +369,7 @@ main {
 .under_line {
     border-bottom: 1px solid #000;
     display: inline-block;
-    width: 23.5em;
+    width: 23.7em;
     padding-bottom: 2px;
 }
 
@@ -388,23 +386,23 @@ main {
     position: relative;
     top: 0;
     right: 0;
-    margin: 4% 12% 0 0;
+    margin: 2% 12% 0 0;
 }
 
-#circle_img1 {
+.circle_imgT {
     position: relative;
     z-index: 3;
 }
 
 /*背景 円*/
-.circle_1 {
+.circle_T {
     position: absolute;
-    width: 44vw;
-    height: 44vw;
+    width: 580px;
+    height: 580px;
     border-radius: 50%;
     background: #f3f3f3;
     top: -80px;
-    right: -30px;
+    right: -40px;
     z-index: 2;
 }
 
@@ -412,16 +410,16 @@ main {
 
     /* 959px以下に適用されるCSS（タブレット用） */
 
-    #top_message {
+    .top_message {
         font-size: 2em;
         line-height: 2;
     }
 
-    #top_ttl {
+    .top_ttl {
         width: 1em;
     }
 
-    #top_sub {
+    .top_sub {
         width: 23.3em;
     }
 
@@ -430,15 +428,15 @@ main {
     }
 
     .top_img {
-        margin: 6% 7.5% 0 0;
+        margin: 6% 7% 0 0;
     }
 
     /*背景 円*/
-    .circle_1 {
-        width: 46vw;
-        height: 46vw;
-        top: -45px;
-        right: -20px;
+    .circle_T {
+        width: 380px;
+        height: 380px;
+        top: -55px;
+        right: -25px;
     }
 }
 
@@ -449,7 +447,7 @@ main {
         padding: 15% 0 5%;
     }
 
-    .top_inner {
+    .top_body {
         display: flex;
         flex-direction: column;
     }
@@ -458,12 +456,12 @@ main {
         width: 100%;
     }
 
-    #top_message {
+    .top_message {
         font-size: 1.7em;
-        padding: 0 0 6% 10%;
+        padding: 0 0 1em 1.5em;
     }
 
-    #top_sub {
+    .top_sub {
         width: 19em;
     }
 
@@ -477,9 +475,9 @@ main {
     }
 
     /*背景 円*/
-    .circle_1 {
-        width: 70vw;
-        height: 70vw;
+    .circle_T {
+        width: 260px;
+        height: 260px;
         top: -40px;
         right: -15px;
     }
@@ -531,7 +529,7 @@ main {
     z-index: 1;
 }
 
-.about_box {
+.about_inner {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -595,13 +593,13 @@ main {
         left: 50px;
     }
 
-    .about_box {
+    .about_inner {
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
     }
 
-    .about_inner {
+    .about_box {
         margin: 0 auto;
     }
 
@@ -686,7 +684,7 @@ main {
     padding-top: 80px;
 }
 
-#review_note {
+.review_note {
     text-align: center;
     display: block;
     color: #000;
@@ -707,22 +705,29 @@ main {
     z-index: 1;
 }
 
+.large_img {
+    width: 40%;
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.circle_imgR {
+    position: relative;
+    z-index: 3;
+}
+
 /*背景 円*/
-.circle_2 {
+.circle_R {
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 50vw;
+    height: 50vw;
     border-radius: 50%;
     background: #fff;
     top: -30px;
-    left: 160px;
+    left: 100px;
     z-index: 2;
-}
-
-#large_img {
-    z-index: 3;
-    width: 40%;
-    margin: auto;
 }
 
 .large_inner {
@@ -731,20 +736,20 @@ main {
     margin: auto;
 }
 
-#large_ttl {
+.large_ttl {
     font-size: 2em;
     color: #000;
     letter-spacing: .1em;
     padding-bottom: 2em;
 }
 
-#large_personal {
+.large_personal {
     font-size: 1.5em;
     color: #000;
     padding-bottom: 2em;
 }
 
-#large_txt {
+.large_txt {
     font-size: 1em;
     color: #000;
     letter-spacing: .1em;
@@ -770,7 +775,7 @@ main {
     height: auto;
 }
 
-#small_ttl {
+.small_ttl {
     font-size: 1.5em;
     color: #000;
 }
@@ -821,27 +826,27 @@ main {
         margin: 50px 10px;
     }
 
-    /*背景 円*/
-    .circle_2 {
-        width: 400px;
-        height: 400px;
-        top: 130px;
-        left: 20px;
+    .large_img {
+        width: 40%;
     }
 
-    #large_img {
-        width: 40%;
+    /*背景 円*/
+    .circle_R {
+        width: 50vw;
+        height: 50vw;
+        top: -25px;
+        left: 25px;
     }
 
     .large_inner {
         width: 55%;
     }
 
-    #large_ttl {
+    .large_ttl {
         padding-bottom: 1em;
     }
 
-    #large_personal {
+    .large_personal {
         padding-bottom: 1em;
     }
 
@@ -874,26 +879,30 @@ main {
         margin: 0 auto;
     }
 
-    /*背景 円*/
-    .circle_2 {
-        width: 250px;
-        height: 250px;
-        top: -10px;
-        left: 110px;
+    .large_img {
+        width: 45%;
     }
 
-    #large_ttl {
+    /*背景 円*/
+    .circle_R {
+        width: 56vw;
+        height: 56vw;
+        top: -8px;
+        left: 15px;
+    }
+
+    .large_ttl {
         font-size: 1.5em;
         padding-bottom: 20px;
         font-weight: 600;
     }
 
-    #large_personal {
+    .large_personal {
         font-size: 1.5em;
         padding-bottom: 20px;
     }
 
-    #large_img {
+    .large_img {
         width: 200px;
         padding-left: 0;
         margin: 0 auto;
@@ -938,12 +947,12 @@ main {
     overflow: hidden;
 }
 
-.news_box {
+.news_inner {
     background: #fff;
     margin: 50px 150px 0;
 }
 
-.news_inner {
+.news_box {
     padding: 60px 50px 0;
 }
 
@@ -974,11 +983,11 @@ main {
         padding-top: 50px;
     }
 
-    .news_box {
+    .news_inner {
         margin: 30px 10px;
     }
 
-    .news_inner {
+    .news_box {
         padding: 40px 20px 0;
     }
 
@@ -1001,7 +1010,7 @@ main {
     overflow: hidden;
 }
 
-#access_txt {
+.access_txt {
     text-align: center;
     padding: 50px 0;
 }
@@ -1031,11 +1040,670 @@ main {
         padding-top: 50px;
     }
 
-    #access_txt {
+    .access_txt {
         text-align: center;
         padding: 30px 0;
     }
+}
 
+/*別ページ*/
+/*----------スットンについて----------*/
+.about_content {
+    background-color: #fffc19;
+    background-size: auto;
+    padding: 10% 0 5%;
+    z-index: 1;
+}
+
+.about_tablet {
+    display: none;
+}
+
+.about_body {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.about_circle {
+    z-index: 3;
+    width: 20%;
+    height: auto;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: auto 15%;
+}
+
+.circle_imgA {
+    position: relative;
+    z-index: 3;
+    margin-top: 100px;
+}
+
+/*背景 円*/
+.circle_A {
+    position: absolute;
+    width: 580px;
+    height: 580px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    top: -80px;
+    right: -240px;
+    z-index: 2;
+}
+
+.about_summary {
+    position: relative;
+    z-index: 5;
+    width: 60%;
+    margin: 0;
+}
+
+/*背景 タイトル*/
+#back_ttl {
+    position: absolute;
+    font-size: 15em;
+    color: #fff;
+    top: -90px;
+    left: 20px;
+    line-height: 1;
+    font-family: 'Barlow Condensed', 'DIN Condensed', 'Tahoma';
+}
+
+.about_message {
+    position: relative;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 60px;
+    line-height: 1.8;
+}
+
+.about_lead {
+    position: relative;
+    width: 80%;
+    font-size: 1em;
+    color: #000;
+    letter-spacing: .1em;
+    line-height: 2.5em;
+    padding-left: 23px;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .about_content {
+        padding: 15% 0 10%;
+    }
+
+    .about_tablet {
+        display: block;
+        position: relative;
+        z-index: 5;
+        margin: 0;
+    }
+
+    .about_none {
+        display: none;
+    }
+
+    .about_circle {
+        margin: 0 7%;
+    }
+
+    .circle_imgA {
+        margin-top: 60px;
+    }
+
+    /*背景 円*/
+    .circle_A {
+        width: 380px;
+        height: 380px;
+        top: -60px;
+        left: -70px;
+    }
+
+    .about_summary {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .about_message {
+        font-size: 2em;
+    }
+
+    .about_lead {
+        width: 100%;
+        padding-left: 0;
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .about_content {
+        padding: 25% 0 10%;
+    }
+
+    .about_body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about_circle {
+        width: 25%;
+        margin: 40px auto 20px;
+    }
+
+    .circle_imgA {
+        margin-top: 0;
+    }
+
+    /*背景 円*/
+    .circle_A {
+        width: 200px;
+        height: 200px;
+        top: -70px;
+        left: -40px;
+    }
+
+    .about_summary {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /*背景 タイトル*/
+    #back_ttl {
+        font-size: 9em;
+        top: -50px;
+        left: 10px;
+    }
+
+    .about_message {
+        font-size: 1.7em;
+        padding-bottom: 50px;
+        margin-bottom: 0;
+    }
+}
+
+/*----------コーチの紹介----------*/
+.coach {
+    background-color: #f3f3f3;
+    padding: 80px 0 0;
+    overflow: hidden;
+}
+
+.coach_inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto 0;
+}
+
+.coach_box {
+    margin: 20px auto 0;
+}
+
+.coach_name {
+    font-size: 2em;
+    color: #000;
+    letter-spacing: .1em;
+    font-weight: 600;
+}
+
+.coach_txt {
+    width: 100%;
+    font-size: 1em;
+    letter-spacing: .1em;
+    line-height: 2em;
+    padding: 0;
+}
+
+.coach_img {
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .coach {
+        padding: 80px 0 0;
+    }
+
+    .coach_inner {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .coach_box {
+        margin: 0 auto;
+    }
+
+    .coach_name {
+        text-align: center;
+    }
+
+    .coach_img {
+        width: 30%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .coach {
+        padding-top: 50px;
+    }
+
+    .coach_name {
+        font-size: 1.5em;
+        font-weight: 600;
+        text-align: center;
+        padding: 0;
+    }
+
+    .coach_box {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .coach_img {
+        width: 60%;
+        padding-left: 15%;
+    }
+}
+
+/*----------スタジオ案内----------*/
+
+.studio {
+    background-color: #f3f3f3;
+    padding: 80px 0 0;
+    overflow: hidden;
+}
+
+.studio_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+}
+
+.studio_txt {
+    font-size: 1em;
+    letter-spacing: .1em;
+    line-height: 2em;
+    margin: 0 auto;
+}
+
+.studio_img {
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .studio {
+        padding: 80px 0 0;
+    }
+
+    .studio_box {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .studio_img {
+        width: 30%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .studio {
+        padding-top: 50px;
+    }
+
+    .studio_txt {
+        width: 95%
+    }
+
+    .studio_img {
+        width: 70%;
+    }
+}
+
+/*----------よくあるご質問----------*/
+.faq {
+    background-color: #fffc19;
+    background-size: auto;
+    padding: 7% 0 0;
+    z-index: 1;
+}
+
+.faq_inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.faq_circle {
+    z-index: 3;
+    width: 30%;
+    height: auto;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 0 5% 0 15%;
+}
+
+.circle_imgF {
+    position: relative;
+    z-index: 3;
+}
+
+/*背景 円*/
+.circle_F {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    top: 20px;
+    right: -100px;
+    z-index: 2;
+}
+
+.faq_box {
+    position: relative;
+    z-index: 5;
+    width: 50%;
+    margin: 4% auto 0;
+}
+
+/*背景 タイトル*/
+.back_ttl {
+    position: absolute;
+    font-size: 15em;
+    color: #fff;
+    top: -90px;
+    left: 0;
+    line-height: 1;
+    font-family: 'Barlow Condensed', 'DIN Condensed', 'Tahoma';
+}
+
+.faq_message {
+    position: relative;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: .1em;
+}
+
+.faq_lead {
+    position: relative;
+    font-size: 1em;
+    color: #000;
+    letter-spacing: .1em;
+    line-height: 1.8em;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .faq {
+        padding: 15% 0 0;
+    }
+
+    .faq_circle {
+        width: 40%;
+        margin: 0 3%;
+    }
+
+    .circle_imgF {
+        margin: 0;
+    }
+
+    /*背景 円*/
+    .circle_F {
+        width: 350px;
+        height: 350px;
+        top: 20px;
+        left: 5px;
+    }
+
+    .faq_box {
+        width: 60%;
+        margin: 0;
+    }
+
+    .faq_message {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .faq {
+        padding: 25% 0 0;
+        overflow: hidden;
+    }
+
+    .faq_inner {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .faq_box {
+        width: 100%;
+        margin: 0;
+    }
+
+    .faq_circle {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    /*背景 円*/
+    .circle_F {
+        width: 250px;
+        height: 250px;
+        top: 10px;
+        left: 10px;
+    }
+
+    /*背景 タイトル*/
+    .back_ttl {
+        font-size: 9em;
+        top: -50px;
+        left: 10px;
+    }
+
+    .faq_message {
+        font-size: 1.7em;
+    }
+
+    .faq_lead {
+        line-height: 1.5em;
+        margin-bottom: 20px;
+    }
+}
+
+/*----------よくあるご質問リスト---------*/
+.faq_content {
+    background-color: #f3f3f3;
+    padding: 80px 0 100px;
+    overflow: hidden;
+}
+
+/*Q＆Aリスト*/
+.faq_list {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.faq_list *,
+.faq_list *:after,
+.faq_list *:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.faq_actab {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 1px;
+    color: #000;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.faq_actab input {
+    position: absolute;
+    opacity: 0;
+}
+
+/* 質問 */
+.faq_actab label {
+    font-weight: 600;
+    line-height: 1.6;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 1em 2em 1em .5em;
+    cursor: pointer;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.faq_actab label:hover {
+    color: #767474;
+}
+
+/* 答え */
+.faq_hide {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: max-height 0.5s ease;
+    transition: max-height 0.5s ease;
+    color: #000;
+    background: #f3f3f3;
+}
+
+/* 質問を開いた時の仕様 */
+/* --アイコン */
+.faq_actab input:checked ~ label {
+    color: #767474;
+}
+
+/* --答えの高さ */
+.faq_actab input:checked ~ .faq_hide {
+    max-height: 40em;
+}
+
+/* 質問をクリックした時のアイコンの動き */
+.faq_actab label::after {
+    line-height: 1.6;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: 3em;
+    margin-top: -12.5px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+.faq_actab input[type=checkbox] + label::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0d7";
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.faq_actab input[type=checkbox]:checked + label::after {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.qa {
+    font-family: 'Arial Black', 'DIN Alternate';
+    font-size: 2em;
+    margin: .5em;
+}
+
+.faq_hide {
+    display: flex;
+    padding-left: .5em;
+    height: 200px;
+}
+
+.faq_q {
+    display: flex;
+}
+
+.q_txt {
+    margin: auto .5em;
+    font-size: 1.5em;
+}
+
+.a_txt {
+    margin: 1em;
+}
+
+
+/*お問い合わせボタン*/
+.about_btn {
+    font-size: 1.5em;
+    background-color: #fffc19;
+    color: #000;
+    display: block;
+    width: 12em;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .faq_list {
+        margin: 50px auto;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .faq_list {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .faq_hide {
+        height: 280px;
+    }
+
+    .faq_q {
+        margin-right: 1.5em;
+    }
+
+    .q_txt {
+        margin: auto .5em;
+        font-size: 1em;
+    }
 }
 
 /*----------not yet open----------*/
@@ -1093,7 +1761,7 @@ footer {
 }
 
 @media screen and (max-width: 559px) {
-    /* 559px以下に適用されるCSS（スマホ用） */
+    /*559px以下に適用されるCSS（スマホ用） */
 
     .footer_wrap {
         display: flex;
