@@ -50,20 +50,19 @@ header {
 }
 
 /*ロゴ*/
-.header_group img {
+.logo_top {
     padding: 5px;
-    width: 300px;
+    width: 25%;
     height: auto;
 }
 
-@media screen and (max-width: 559px) {
+@media screen and (max-width: 959px) {
 
-    /* 559px以下に適用されるCSS（スマホ用） */
+    /* 959px以下に適用されるCSS（タブレット用） */
     /*ロゴ*/
-    .header_group img {
-        padding-right: .5em;
-        width: 25%;
-        height: auto;
+    .logo_top {
+        width: 35%;
+        margin: auto 0;
     }
 }
 
@@ -76,7 +75,7 @@ header {
 .global_menu ul {
     display: flex;
     justify-content: space-between;
-    margin: 20px 50px 20px 0;
+    margin: 20px 45px 20px 0;
 }
 
 .global_menu li {
@@ -103,7 +102,6 @@ header {
 }
 
 .contact_btn a:hover {
-    color: #fff;
     background: #0995df;
 }
 
@@ -298,7 +296,7 @@ input {
 
     /*ハンバーガー*/
     .hamburger {
-        top: 12px;
+        top: 10px;
         right: 10px;
     }
 }
@@ -307,14 +305,19 @@ input {
 
     /* 559px以下に適用されるCSS（スマホ用） */
     /*申込みボタン*/
+
     .contact_btn a {
         line-height: 2em;
-        margin: .6em 2.5em;
+        margin: .6em 2.5em 0 0;
         padding: .5em;
+        display: block;
+        width: 170px;
+        text-align: center;
     }
+
 }
 
-/*メイン*/
+/*メイン
 /*---------TOP----------*/
 main {
     line-height: 1.6;
@@ -537,7 +540,7 @@ main {
 }
 
 .about_catch {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #000;
     letter-spacing: .1em;
 }
@@ -565,7 +568,7 @@ main {
 /*詳細ボタン*/
 .about_btn {
     font-size: 1em;
-    background-color: #fffc19;
+    background: #fffc19;
     color: #000;
     display: block;
     width: 12em;
@@ -573,6 +576,13 @@ main {
     line-height: 3em;
     text-align: center;
     border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: .1em;
+}
+
+.about_btn:hover {
+    background: #e5e317;
+
 }
 
 @media screen and (max-width: 959px) {
@@ -646,7 +656,7 @@ main {
     }
 
     .about_catch {
-        font-size: 1.5em;
+        font-size: 2em;
         font-weight: 600;
         text-align: left;
         padding: 0 10px;
@@ -773,6 +783,7 @@ main {
     margin: 0 10px;
     width: 30%;
     height: auto;
+    border-radius: 50px;
 }
 
 .small_ttl {
@@ -852,7 +863,7 @@ main {
 
     /*お客さまの声 その他1~3*/
     .review_small {
-        padding: 30px 10px 10px;
+        padding: 30px 15px;
     }
 
     .small_inner {
@@ -922,7 +933,7 @@ main {
     }
 
     .review_small {
-        padding: 20px 8px 10px;
+        padding: 20px 10px;
         margin: 0 30px 20px;
     }
 
@@ -949,7 +960,8 @@ main {
 
 .news_inner {
     background: #fff;
-    margin: 50px 150px 0;
+    margin: 50px 130px 0;
+    border-radius: 50px;
 }
 
 .news_box {
@@ -1377,7 +1389,7 @@ main {
     }
 }
 
-/*----------よくあるご質問----------*/
+/*----------よくあるご質問TOP----------*/
 .faq {
     background-color: #fffc19;
     background-size: auto;
@@ -1538,7 +1550,7 @@ main {
     }
 }
 
-/*----------よくあるご質問リスト---------*/
+/*----------よくあるご質問---------*/
 .faq_content {
     background-color: #f3f3f3;
     padding: 80px 0 100px;
@@ -1547,7 +1559,7 @@ main {
 
 /*Q＆Aリスト*/
 .faq_list {
-    width: 80%;
+    width: 75%;
     margin: 100px auto;
 }
 
@@ -1645,7 +1657,7 @@ main {
 .faq_hide {
     display: flex;
     padding-left: .5em;
-    height: 200px;
+    height: 120px;
 }
 
 .faq_q {
@@ -1655,17 +1667,19 @@ main {
 .q_txt {
     margin: auto .5em;
     font-size: 1.5em;
+    letter-spacing: .1px;
 }
 
 .a_txt {
     margin: 1em;
+    letter-spacing: .1px;
 }
 
 
 /*お問い合わせボタン*/
 .contact_btn2 {
     font-size: 1.5em;
-    background-color: #fffc19;
+    background: #fffc19;
     color: #000;
     display: block;
     width: 12em;
@@ -1674,13 +1688,24 @@ main {
     text-align: center;
     border-radius: 10px;
     margin: 0 auto;
+    letter-spacing: .1px;
 }
+
+.contact_btn2:hover {
+    background: #e5e317;
+}
+
+
 
 @media screen and (max-width: 959px) {
     /* 959px以下に適用されるCSS（タブレット用） */
 
     .faq_list {
         margin: 50px auto;
+    }
+
+    .faq_hide {
+        height: 160px;
     }
 }
 
@@ -1706,6 +1731,187 @@ main {
     }
 }
 
+/*----------サービス紹介TOP----------*/
+.service {
+    background-color: #fffc19;
+    background-size: auto;
+    padding: 7% 0 5%;
+    z-index: 1;
+}
+
+.service_inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.service_circle {
+    z-index: 3;
+    width: 30%;
+    height: auto;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 0 5% 0 15%;
+}
+
+.circle_imgS {
+    position: relative;
+    z-index: 3;
+}
+
+/*背景 円*/
+.circle_S {
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    top: 20px;
+    right: -100px;
+    z-index: 2;
+}
+
+.service_box {
+    position: relative;
+    z-index: 5;
+    width: 50%;
+    margin: 4% auto 0;
+}
+
+/*背景 タイトル*/
+.back_ttl {
+    position: absolute;
+    font-size: 15em;
+    color: #fff;
+    top: -90px;
+    left: 0;
+    line-height: 1;
+    font-family: 'Barlow Condensed', 'DIN Condensed', 'Tahoma';
+}
+
+.service_message {
+    position: relative;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: .1em;
+}
+
+.service_lead {
+    position: relative;
+    font-size: 1em;
+    color: #000;
+    letter-spacing: .1em;
+    line-height: 1.8em;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .service {
+        padding: 15% 0 0;
+    }
+
+    .service_circle {
+        width: 40%;
+        margin: 0 3%;
+    }
+
+    .circle_imgS {
+        margin: 0;
+    }
+
+    /*背景 円*/
+    .circle_S {
+        width: 350px;
+        height: 350px;
+        top: 20px;
+        left: 5px;
+    }
+
+    .service_box {
+        width: 60%;
+        margin: 0;
+    }
+
+    .service_message {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .service {
+        padding: 25% 0 0;
+        overflow: hidden;
+    }
+
+    .service_inner {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .service_box {
+        width: 100%;
+        margin: 0;
+    }
+
+    .service_circle {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    /*背景 円*/
+    .circle_S {
+        width: 250px;
+        height: 250px;
+        top: 10px;
+        left: 10px;
+    }
+
+    /*背景 タイトル*/
+    .back_ttl {
+        font-size: 9em;
+        top: -50px;
+        left: 10px;
+    }
+
+    .service_message {
+        font-size: 1.7em;
+    }
+
+    .service_lead {
+        line-height: 1.5em;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------not yet open----------*/
 .not_yet {
     background-color: #f3f3f3;
@@ -1730,14 +1936,14 @@ footer {
 
 .footer_wrap a {
     color: #000;
-    font-size: .8em;
+    font-size: 1em;
 }
 
 .footer_wrap::before {
     content: '';
     display: block;
-    height: .8em;
-    width: 19.2em;
+    height: 1em;
+    width: 22em;
 }
 
 .footer_wrap img {
@@ -1790,9 +1996,11 @@ footer {
         padding: 0 1em;
     }
 
+    /*
     #adjust {
         padding-right: 1.6em;
     }
+*/
 }
 
 /*コピー*/
