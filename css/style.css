@@ -31,6 +31,15 @@ header {
     z-index: 10;
 }
 
+_:lang(x) + _:-webkit-full-screen-document,
+header {
+    background-color: #fffc19;
+    line-height: 1.6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
 .header_group {
     display: flex;
     justify-content: space-between;
@@ -1624,8 +1633,7 @@ main {
 }
 
 /* 答え */
-.faq_hide,
-.faq_hide2 {
+.faq_hide {
     overflow: hidden;
     max-height: 0;
     -webkit-transition: max-height 0.5s ease;
@@ -1645,10 +1653,6 @@ main {
 
 /* --答えの高さ */
 .faq_actab input:checked ~ .faq_hide {
-    max-height: 40em;
-}
-
-.faq_actab input:checked ~ .faq_hide2 {
     max-height: 40em;
 }
 
@@ -1735,9 +1739,8 @@ main {
         margin: 50px auto;
     }
 
-    .faq_hide,
-    .faq_hide2 {
-        height: 200px;
+    .faq_hide {
+        height: 100%;
     }
 }
 
@@ -1747,14 +1750,6 @@ main {
     .faq_list {
         width: 90%;
         margin: 30px auto;
-    }
-
-    .faq_hide {
-        height: 360px;
-    }
-
-    .faq_hide2 {
-        height: 500px;
     }
 
     .faq_q {
