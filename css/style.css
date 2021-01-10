@@ -38,17 +38,6 @@ header {
     height: 100px;
 }
 
-@media screen and (max-width: 559px) {
-
-    /* 559px以下に適用されるCSS（スマホ用） */
-    .header_group {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 10px;
-        height: 60px;
-    }
-}
-
 /*ロゴ*/
 .logo_top {
     padding: 5px;
@@ -62,6 +51,23 @@ header {
     /*ロゴ*/
     .logo_top {
         width: 35%;
+        margin: auto 0;
+    }
+}
+
+@media screen and (max-width: 559px) {
+
+    /* 559px以下に適用されるCSS（スマホ用） */
+    .header_group {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2%;
+        height: 60px;
+    }
+
+    /*ロゴ*/
+    .logo_top {
+        width: 25%;
         margin: auto 0;
     }
 }
@@ -308,10 +314,10 @@ input {
 
     .contact_btn a {
         line-height: 2em;
-        margin: .6em 2.5em 0 0;
-        padding: .5em;
+        margin: .6em 3.5em 0 0;
+        padding: .5em 0;
         display: block;
-        width: 170px;
+        width: 160px;
         text-align: center;
     }
 
@@ -1129,6 +1135,7 @@ main {
     font-weight: 500;
     margin-bottom: 60px;
     line-height: 1.8;
+    letter-spacing: .1em;
 }
 
 .about_lead {
@@ -1180,8 +1187,16 @@ main {
         margin: 0 auto;
     }
 
+    /*背景 タイトル*/
+    #back_ttl {
+        top: -90px;
+        left: 250px;
+        font-size: 13em;
+    }
+
     .about_message {
         font-size: 2em;
+        margin: 0 0 60px 32%;
     }
 
     .about_lead {
@@ -1227,15 +1242,16 @@ main {
 
     /*背景 タイトル*/
     #back_ttl {
-        font-size: 9em;
-        top: -50px;
+        font-size: 8em;
+        top: -40px;
         left: 10px;
     }
 
     .about_message {
-        font-size: 1.7em;
+        font-size: 1.6em;
         padding-bottom: 50px;
-        margin-bottom: 0;
+        margin: 0;
+        letter-spacing: 0;
     }
 }
 
@@ -1494,6 +1510,11 @@ main {
         margin: 0;
     }
 
+    .back_ttl {
+        font-size: 13em;
+        top: -80px;
+    }
+
     .faq_message {
         font-size: 2em;
         margin-bottom: 20px;
@@ -1535,13 +1556,14 @@ main {
 
     /*背景 タイトル*/
     .back_ttl {
-        font-size: 9em;
-        top: -50px;
+        font-size: 8em;
+        top: -40px;
         left: 10px;
     }
 
     .faq_message {
-        font-size: 1.7em;
+        font-size: 1.6em;
+        letter-spacing: 0;
     }
 
     .faq_lead {
@@ -1553,13 +1575,13 @@ main {
 /*----------よくあるご質問---------*/
 .faq_content {
     background-color: #f3f3f3;
-    padding: 80px 0 100px;
+    padding-top: 80px;
     overflow: hidden;
 }
 
 /*Q＆Aリスト*/
 .faq_list {
-    width: 75%;
+    width: 67em;
     margin: 100px auto;
 }
 
@@ -1602,13 +1624,17 @@ main {
 }
 
 /* 答え */
-.faq_hide {
+.faq_hide,
+.faq_hide2 {
     overflow: hidden;
     max-height: 0;
     -webkit-transition: max-height 0.5s ease;
     transition: max-height 0.5s ease;
     color: #000;
     background: #f3f3f3;
+    display: flex;
+    padding-left: .5em;
+    height: 150px;
 }
 
 /* 質問を開いた時の仕様 */
@@ -1619,6 +1645,10 @@ main {
 
 /* --答えの高さ */
 .faq_actab input:checked ~ .faq_hide {
+    max-height: 40em;
+}
+
+.faq_actab input:checked ~ .faq_hide2 {
     max-height: 40em;
 }
 
@@ -1654,12 +1684,6 @@ main {
     margin: .5em;
 }
 
-.faq_hide {
-    display: flex;
-    padding-left: .5em;
-    height: 120px;
-}
-
 .faq_q {
     display: flex;
 }
@@ -1673,10 +1697,16 @@ main {
 .a_txt {
     margin: 1em;
     letter-spacing: .1px;
+    line-height: 2em;
 }
 
+/*お問い合わせ*/
+.contact_link {
+    background: #f3f3f3;
+    padding-bottom: 100px;
+    margin: 0 auto;
+}
 
-/*お問い合わせボタン*/
 .contact_btn2 {
     font-size: 1.5em;
     background: #fffc19;
@@ -1688,24 +1718,26 @@ main {
     text-align: center;
     border-radius: 10px;
     margin: 0 auto;
-    letter-spacing: .1px;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .contact_btn2:hover {
     background: #e5e317;
 }
 
-
-
 @media screen and (max-width: 959px) {
-    /* 959px以下に適用されるCSS（タブレット用） */
 
+    /* 959px以下に適用されるCSS（タブレット用） */
+    /*Q＆Aリスト*/
     .faq_list {
+        width: 75%;
         margin: 50px auto;
     }
 
-    .faq_hide {
-        height: 160px;
+    .faq_hide,
+    .faq_hide2 {
+        height: 200px;
     }
 }
 
@@ -1718,7 +1750,11 @@ main {
     }
 
     .faq_hide {
-        height: 280px;
+        height: 360px;
+    }
+
+    .faq_hide2 {
+        height: 500px;
     }
 
     .faq_q {
@@ -1733,9 +1769,9 @@ main {
 
 /*----------サービス紹介TOP----------*/
 .service {
-    background-color: #fffc19;
+    background: #fffc19;
     background-size: auto;
-    padding: 7% 0 5%;
+    padding: 7% 0 0;
     z-index: 1;
 }
 
@@ -1752,7 +1788,7 @@ main {
     position: relative;
     top: 0;
     right: 0;
-    margin: 0 5% 0 15%;
+    margin: 8% 0 0 6%;
 }
 
 .circle_imgS {
@@ -1763,12 +1799,12 @@ main {
 /*背景 円*/
 .circle_S {
     position: absolute;
-    width: 480px;
-    height: 480px;
+    width: 440px;
+    height: 440px;
     border-radius: 50%;
     background: #f3f3f3;
-    top: 20px;
-    right: -100px;
+    top: -70px;
+    right: -110px;
     z-index: 2;
 }
 
@@ -1777,17 +1813,6 @@ main {
     z-index: 5;
     width: 50%;
     margin: 4% auto 0;
-}
-
-/*背景 タイトル*/
-.back_ttl {
-    position: absolute;
-    font-size: 15em;
-    color: #fff;
-    top: -90px;
-    left: 0;
-    line-height: 1;
-    font-family: 'Barlow Condensed', 'DIN Condensed', 'Tahoma';
 }
 
 .service_message {
@@ -1815,8 +1840,8 @@ main {
     }
 
     .service_circle {
-        width: 40%;
-        margin: 0 3%;
+        width: 35%;
+        margin: 7% 1% 0;
     }
 
     .circle_imgS {
@@ -1825,15 +1850,15 @@ main {
 
     /*背景 円*/
     .circle_S {
-        width: 350px;
-        height: 350px;
-        top: 20px;
-        left: 5px;
+        width: 300px;
+        height: 300px;
+        top: -43px;
+        left: 28px;
     }
 
     .service_box {
-        width: 60%;
-        margin: 0;
+        width: 63%;
+        margin: 0 0 2% 0;
     }
 
     .service_message {
@@ -1869,30 +1894,647 @@ main {
 
     /*背景 円*/
     .circle_S {
-        width: 250px;
-        height: 250px;
-        top: 10px;
-        left: 10px;
-    }
-
-    /*背景 タイトル*/
-    .back_ttl {
-        font-size: 9em;
-        top: -50px;
-        left: 10px;
+        width: 240px;
+        height: 240px;
+        top: -30px;
+        left: 25px;
     }
 
     .service_message {
-        font-size: 1.7em;
+        font-size: 1.6em;
+        margin-bottom: 40px;
+        letter-spacing: 0;
     }
 
     .service_lead {
         line-height: 1.5em;
+        margin-bottom: 40px;
+    }
+}
+
+/*----------サービス紹介---------*/
+.service_content {
+    background: #f3f3f3;
+    padding-top: 80px;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.flow_chart {
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+}
+
+.service_flow {
+    margin: 0;
+}
+
+/*flow 1st~4th*/
+.flow_item {
+    width: 95%;
+    margin: 0 auto 50px;
+}
+
+.numbers_box1 {
+    width: 6%;
+}
+
+.flow_ttl {
+    font-size: 2.5em;
+    color: #000;
+    letter-spacing: .1em;
+}
+
+.flow_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flow_txt {
+    width: 75%;
+    font-size: 1em;
+    letter-spacing: .1em;
+    line-height: 2em;
+    padding-top: 30px;
+}
+
+.flow_img {
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+#flow_img {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    padding-right: 50px;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .service_content {
+        padding: 80px 0 0;
+    }
+
+    .service_flow {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /*flow 1st~4th*/
+    .flow_item {
+        margin-bottom: 80px;
+        width: 100%;
+    }
+
+    .flow_box {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
+
+    .numbers_box1 {
+        width: 10%;
+    }
+
+    .flow_ttl {
+        text-align: left;
+    }
+
+    .flow_txt {
+        width: 100%;
+        padding-top: 10px;
+        margin: 0 auto;
+    }
+
+    .flow_img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #flow_img {
+        width: 35%;
+        height: auto;
+        margin: auto;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .service_content {
+        padding-top: 50px;
+    }
+
+    .flow_chart {
+        margin: 20px auto 0;
+    }
+
+    .service_flow {
+        margin: 0 auto;
+    }
+
+    /*flow 1st~4th*/
+    .flow_item {
+        margin-bottom: 50px;
+    }
+
+    .flow_item:last-child {
+        margin-bottom: 0;
+    }
+
+    .numbers_box1 {
+        width: 20%;
+    }
+
+    .flow_ttl {
+        font-size: 2em;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .flow_txt {
+        padding-top: 0;
+        margin: 0 auto;
+    }
+
+    .flow_img {
+        width: 60%;
+    }
+
+    #flow_img {
+        width: 40%;
+    }
+}
+
+/*----------コーチングの効果----------*/
+.effect_content {
+    background: #fff;
+    padding-top: 80px;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.effect_item {
+    width: 95%;
+    margin: 100px auto 50px;
+}
+
+.effect_tag {
+    width: 24%;
+}
+
+.effect_ttl {
+    font-size: 2.5em;
+    color: #000;
+    letter-spacing: .1em;
+}
+
+.effect_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.effect_txt {
+    width: 45%;
+    font-size: 1em;
+    letter-spacing: .1em;
+    line-height: 2em;
+    padding-top: 30px;
+}
+
+.effect_img {
+    width: 30%;
+    height: auto;
+    margin: auto;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .effect_content {
+        padding: 80px 0 0;
+    }
+
+    .effect_item {
+        margin-bottom: 80px;
+        width: 95%;
+    }
+
+    .effect_tag {
+        width: 38%;
+    }
+
+    .effect_ttl {
+        text-align: left;
+    }
+
+    .effect_box {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
+
+    .effect_txt {
+        width: 100%;
+        padding-top: 10px;
+        margin: 0 auto;
+    }
+
+    .effect_img {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .effect_content {
+        padding-top: 50px;
+    }
+
+    .effect_item {
+        margin-bottom: 50px;
+    }
+
+    .effect_item:last-child {
+        margin-bottom: 0;
+    }
+
+    .effect_tag {
+        width: 80%;
+    }
+
+    .effect_ttl {
+        font-size: 2em;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .effect_txt {
+        padding-top: 0;
+        margin: 0 auto;
+    }
+
+    .effect_img {
+        width: 60%;
+    }
+}
+
+/*無料はじめて申込み*/
+.contact_link2 {
+    background: #fff;
+    padding: 50px 0 100px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.contact_btn3 {
+    font-size: 1.5em;
+    background: #0dabff;
+    color: #fff;
+    display: block;
+    width: 12em;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.contact_btn3:hover {
+    background: #0995df;
+}
+
+/*----------料金プランTOP----------*/
+.price {
+    background: #fffc19;
+    background-size: auto;
+    padding: 7% 0 0;
+    z-index: 1;
+}
+
+.price_inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.price_circle {
+    z-index: 3;
+    width: 30%;
+    height: auto;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 2% 0 0 16%;
+}
+
+.circle_imgP {
+    position: relative;
+    z-index: 3;
+}
+
+/*背景 円*/
+.circle_P {
+    position: absolute;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    top: 0;
+    right: -55px;
+    z-index: 2;
+}
+
+.price_box {
+    position: relative;
+    z-index: 5;
+    width: 50%;
+    margin: 4% auto 0;
+}
+
+.price_message {
+    position: relative;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    letter-spacing: .1em;
+}
+
+.price_lead {
+    position: relative;
+    font-size: 1em;
+    color: #000;
+    letter-spacing: .1em;
+    line-height: 1.8em;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .price {
+        padding: 15% 0 0;
+    }
+
+    .price_circle {
+        width: 35%;
+        margin: 2% 0 0 4%;
+    }
+
+    .circle_imgP {
+        margin: 0;
+    }
+
+    /*背景 円*/
+    .circle_P {
+        width: 300px;
+        height: 300px;
+        top: 0px;
+        left: 5px;
+    }
+
+    .price_box {
+        width: 60%;
+        margin: 0 0 2% 0;
+    }
+
+    .price_message {
+        font-size: 2em;
         margin-bottom: 20px;
     }
 }
 
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
 
+    .price {
+        padding: 25% 0 0;
+        overflow: hidden;
+    }
+
+    .price_inner {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .price_box {
+        width: 100%;
+        margin: 0;
+    }
+
+    .price_circle {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    /*背景 円*/
+    .circle_P {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: -6px;
+    }
+
+    .price_message {
+        font-size: 1.6em;
+        margin-bottom: 40px;
+        letter-spacing: 0;
+    }
+
+    .price_lead {
+        line-height: 1.5em;
+        margin-bottom: 40px;
+    }
+}
+
+/*----------料金プラン---------*/
+.price_content {
+    background: #f3f3f3;
+    padding-top: 80px;
+    overflow: hidden;
+    z-index: 5;
+}
+
+/*price 01~03*/
+.price_item {
+    width: 90%;
+    margin: 0 auto 50px;
+}
+
+.numbers_box2 {
+    width: 6%;
+}
+
+.price_ttl {
+    font-size: 2.5em;
+    color: #000;
+    letter-spacing: .1em;
+}
+
+.price_exp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price_txt {
+    width: 100%;
+    font-size: 1em;
+    letter-spacing: .1em;
+    line-height: 2em;
+}
+
+/*プライスカード　01*/
+.price_card {
+    background: #fff;
+    padding: 2em 3em 1em;
+    display: inline-block;
+    border-radius: 20px;
+    height: 9em;
+    width: 70%;
+}
+
+.card_txt {
+    font-family: 'Avenir', 'Ebrima';
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.card_ltxt {
+    font-size: 2em;
+    padding: 0 .5em;
+}
+
+.card_stxt {
+    font-size: .8em;
+    padding-left: 16.5em;
+}
+
+.br_show {
+    display: none;
+}
+
+/*無料はじめて申込み*/
+.contact_link3 {
+    background: #f3f3f3;
+    padding: 50px 0 100px;
+    color: #fff;
+}
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+
+    .price_content {
+        padding: 80px 0 0;
+    }
+
+    .price_course {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /*price 01~03*/
+    .price_item {
+        margin-bottom: 80px;
+        width: 100%;
+    }
+
+    .price_exp {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .numbers_box2 {
+        width: 10%;
+    }
+
+    .price_ttl {
+        text-align: left;
+    }
+
+    .price_txt {
+        width: 100%;
+        padding-top: 0;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    /*プライスカード　01*/
+    .price_card {
+        margin: 30px auto;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    /* 559px以下に適用されるCSS（スマホ用） */
+
+    .price_content {
+        padding: 80px 0 0;
+    }
+
+    .price_course {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /*price 01~03*/
+    .price_item {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .price_item:last-child {
+        margin-bottom: 0;
+    }
+
+    .numbers_box2 {
+        width: 20%;
+    }
+
+    .price_ttl {
+        font-size: 2em;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .price_txt {
+        padding-top: 0;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /*プライスカード　01*/
+    .price_card {
+        background: #fff;
+        width: 100%;
+        margin: 10px auto 30px;
+        padding: 1em;
+    }
+
+    .card_txt {
+        text-align: center;
+    }
+
+    .card_stxt {
+        padding: 0;
+    }
+
+    .br_show {
+        display: block;
+    }
+}
 
 
 
@@ -2006,6 +2648,6 @@ footer {
 /*コピー*/
 small p {
     text-align: center;
-    font-size: .3em;
+    font-size: .8em;
     padding: 0 0 2em;
 }
