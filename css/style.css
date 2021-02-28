@@ -411,6 +411,12 @@ main {
     color: #fc546a;
     font-size: 5em;
     text-align: center;
+    line-height: 1.5em;
+}
+
+#num_font {
+    font-size: 2em;
+    font-family: 'HoeflerText-Black', 'Sitka Small';
 }
 
 .top_list {
@@ -518,6 +524,8 @@ main {
     text-align: center;
     letter-spacing: .1em;
     font-size: 4vw;
+    color: #353c34;
+    font-family: 'Times New Roman';
     width: 100%;
     top: 75%;
     left: 50%;
@@ -597,11 +605,13 @@ main {
 }
 
 .btn_hp a {
+    color: #353c34;
     font-size: 1.2em;
 }
 
 .eng_txt {
     font-size: 2em;
+    font-family: 'Times New Roman';
 }
 
 aside {
@@ -1172,6 +1182,7 @@ footer {
 .black_2s {
     font-size: 1.5em;
     font-weight: bold;
+    font-family: 'Times New Roman';
 }
 
 .black_105 {
