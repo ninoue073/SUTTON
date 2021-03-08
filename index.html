@@ -9,6 +9,7 @@
     <title>PERSONAL STUDY(パーソナルスタディ)｜小中高生対象の個別指導</title>
     <meta name="description" content="2ヶ月で成績を上げたい小中高生の保護者様へ。当塾の専属パーソナルトレーナーと東大生含む高学歴講師にお任せください！">
     <meta name=”keywords” content=”#”>
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" href="css/reset.css">
@@ -26,7 +27,6 @@
 <body>
     <!--ヘッダー-->
     <header>
-
         <div class="header_group">
             <div class="header_top">
                 <!--ロゴ-->
@@ -36,15 +36,15 @@
 
                 <div class="header_ttl">
                     <h1>パーソナルスタディオンライン</h1>
-                    <div class="header_info">
+                    <div class="header_info none_mo">
                         <p>平日・土曜 10:00~21:00</p>
-                        <p class="bold_013"><i class="fas fa-phone-alt fa-1x"></i> 0120-118-221</p>
+                        <p class="bold_013"><i class="fas fa-phone-alt fa-1x"></i> <span class="tel-link">0120-118-221</span></p>
                     </div>
                 </div>
 
                 <!--お問合わせボタン-->
                 <div class="top_btn">
-                    <div class="btn_trial">
+                    <div class="btn_trial none_mo">
                         <div class="btn_inner">
                             <a href="#" target="_blank">まずは<br>無料体験</a>
                         </div>
@@ -57,30 +57,24 @@
                 </div>
             </div>
 
+            <div class="header_info none_pc">
+                <p>平日・土曜 10:00~21:00</p>
+                <p class="bold_013"><i class="fas fa-phone-alt fa-1x"></i> <span class="tel-link">0120-118-221</span></p>
+            </div>
+
+
             <!--メニュー-->
-            <div class="header_menu">
-                <div class="tab_menu">
-                    <div class="fullscreenmenu">
-                        <input type="checkbox" id="toggle" />
-                        <label class="hamburger" for="toggle">
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                            <div class="bar"></div>
-                        </label>
-                        <div class="global_menu">
-                            <nav>
-                                <ul>
-                                    <li><a href="#">ホーム</a></li>
-                                    <li><a href="#">パーソナルスタディが選ばれる理由</a></li>
-                                    <li><a href="#">当塾の強み</a></li>
-                                    <li><a href="#">ご利用の流れ</a></li>
-                                    <li><a href="#">パーソナルスタディとは</a></li>
-                                    <li><a href="#">お問い合わせ</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+            <div class="global_menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">ホーム</a></li>
+                        <li><a href="#">パーソナルスタディが選ばれる理由</a></li>
+                        <li><a href="#">当塾の強み</a></li>
+                        <li><a href="#">ご利用の流れ</a></li>
+                        <li><a href="#">パーソナルスタディとは</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
@@ -91,7 +85,7 @@
         <section class="top_content">
             <div class="top_box">
                 <div class="top_ttl">
-                    <h2 class="pink_5"><span id="num_font">2</span>ヶ月で成績を上げたい<br>小中高生の保護者様へ</h2>
+                    <h2 class="pink_5"><span id="num_font">2</span>ヶ月で<span class="mo_font1">成績</span>を<span class="mo_font1">上げたい</span><br>小中高生の保護者様へ</h2>
                 </div>
                 <div class="top_list">
                     <ul>
@@ -104,7 +98,7 @@
                     </ul>
                 </div>
                 <div class="top_txt">
-                    <h3 class="pink_5"><span class="normal_txt">当塾の</span>専属パーソナルトレーナー<span class="normal_txt">と</span><br>東大生<span class="normal_txt">含む</span>高学歴講師<span class="normal_txt">にお任せください！</span></h3>
+                    <h3 class="pink_5"><span class="normal_txt">当塾の</span><span class="mo_font2">専属パーソナルトレーナー</span><span class="normal_txt">と</span><br>東大生<span class="normal_txt">含む</span><span class="mo_font2">高学歴講師</span><span class="normal_txt">にお任せください！</span></h3>
                 </div>
                 <div class="lank_box">
                     <div class="lank_left">
@@ -130,7 +124,7 @@
 
         <!------------パーソナルスタディが選ばれる理由------------>
         <section class="reason_content">
-            <h2 class="content_ttl">パーソナルスタディが選ばれる理由</h2>
+            <h2 class="content_ttl">パーソナルスタディが<br class="none_pc">選ばれる理由</h2>
             <div class="reason_group">
                 <!--理由1-->
                 <div class="reason_box">
@@ -165,7 +159,7 @@
                 <!--HPへのボタン-->
                 <div class="btn_box">
                     <div class="btn_hp">
-                        <a href="#" target="_blank"><span class="eng_txt">PERSONAL STUDY</span> をもっと詳しく</a>
+                        <a href="#" class="btn_link btn_flat" target="_blank"><span id="btn_txt"><span class="eng_txt">PERSONAL STUDY</span> <br class="none_pc">をもっと詳しく</span></a>
                     </div>
                 </div>
 
@@ -176,16 +170,35 @@
         <aside>
             <div class="tel_box">
                 <div class="tel_inner">
-                    <p>お電話でのお問い合わせ</p>
-                    <p id="tel_num">0120-187-703</p>
-                    <p>平日・土曜 10:00~21:00</p>
+                    <div class="tel_ve">
+                        <div id="tel_txt">
+                            <p>お電話でのお問い合わせ</p>
+                        </div>
+                        <p id="tel_num"><span class="tel-link">0120-187-703</span></p>
+                    </div>
+                    <div id="tel_sc">
+                        <p>平日・土曜 10:00~21:00</p>
+                    </div>
                 </div>
             </div>
+
+            <script>
+                $(function() {
+                    var ua = navigator.userAgent;
+                    if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) {
+                        $('.tel-link').each(function() {
+                            var str = $(this).text();
+                            $(this).html($('<a>').attr('href', 'tel:' + str.replace(/-/g, '')).append(str + '</a>'));
+                        });
+                    }
+                });
+            </script>
+
         </aside>
 
         <!------------オンラインを最大限に活かした当塾の強み----------->
         <section class="feature_content">
-            <h2 class="content_ttl">オンラインを最大限に活かした当塾の強み</h2>
+            <h2 class="content_ttl">オンラインを最大限に活かした<br class="none_pc">当塾の強み</h2>
             <div class="feature_group">
                 <!--強み1-->
                 <div class="feature_box">
@@ -194,13 +207,13 @@
                         　 <p class="feature_txt">トレーナーによる面談が今までは通塾している時しかできませんでした。それがオンラインになることで、家にいるときも面談が出来ます。<br>それによって、行動継続・目標意欲の維持が可能となり、短期間での成績アップが実現。</p>
                     </div>
                     <div class="feature_img">
-                        　 <img class="square_img" src="images/feature1.jpg" alt="強み１：個別面談">
+                        　 <img src="images/feature1.jpg" alt="強み１：個別面談">
                         　 </div>
                 </div>
                 <!--強み2-->
-                <div class="feature_box">
+                <div class="feature_box" id="feature_box">
                     <div class="feature_img">
-                        　 <img class="square_img" src="images/feature2.jpg" alt="強み２：オンライン映像授業見放題">
+                        　 <img src="images/feature2.jpg" alt="強み２：オンライン映像授業見放題">
                         　 </div>
                     　 <div class="feature_inner">
                         　 <h3 class="feature_ttl">強み２：オンライン映像授業見放題</h3>
@@ -215,7 +228,7 @@
                         　 <p class="feature_txt">管理型自習室という今までに無い制度を構築。<br>従来の自由に参加する自習室は、実はあまり活用されていないという問題がありました。<br>それをあらかじめ決めて参加を管理することで学習習慣定着を実現していきます。</p>
                     </div>
                     <div class="feature_img">
-                        　 <img class="square_img" src="images/feature3.jpg" alt="強み３：オンライン管理型自習室">
+                        　 <img src="images/feature3.jpg" alt="強み３：オンライン管理型自習室">
                         　 </div>
                 </div>
             </div>
@@ -230,7 +243,7 @@
                     <table border="1">
                         <tr>
                             <th class="tag_none"></th>
-                            <th class="tag_orange">パーソナルスタディ<br>オンライン</th>
+                            <th class="tag_orange">パーソナル<br class="none_pc">スタディ<br>オンライン</th>
                             <th class="tag_yellow">大手塾</th>
                             <th class="tag_green">他社個別指導</th>
                         </tr>
@@ -305,7 +318,7 @@
                     </p>
                 </div>
                 <div class="online_img">
-                    <img class="square_img" src="images/online.jpg" alt="オンライン環境がない人にも万全サポート">
+                    <img src="images/online.jpg" alt="オンライン環境がない人にも万全サポート">
                 </div>
             </div>
         </section>
@@ -387,20 +400,63 @@
                 </div>
             </div>
         </section>
+
+        <!--追従式CTA-->
+        <div class="pagetop">
+            <div class="floating_banner">
+                <div class="close_box">
+                    <div class="close_btn">×</div>
+                </div>
+                <a href="#" target="_blank">
+                    <div class="floating_box">
+                        <p class="floating_copy">今だけ!!<span class="sp"></span>60分×2回<br class="none">無料体験<br class="none_pc">キャンペーン<br class="none">実施中</p>
+                        <p class="floating_btn">お問い合わせ</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <script>
+            $('.close_box').click(function() {
+                $('.floating_banner').hide();
+            })
+
+            $(function() {
+                $(window).on("scroll", function() {
+                    if ($(this).scrollTop() > 100) {
+                        $(".pagetop").fadeIn("fast");
+                    } else {
+                        $(".pagetop").fadeOut("fast");
+                    }
+
+                    scrollHeight = $(document).height();
+                    scrollPosition = $(window).height() + $(window).scrollTop();
+                    footHeight = $(".footer_bottom").innerHeight();
+
+                    if (scrollHeight - scrollPosition <= footHeight) {
+                        $(".pagetop").css({
+                            "position": "absolute",
+                        });
+                    } else {
+                        $(".pagetop").css({
+                            "position": "fixed",
+                        });
+                    }
+                });
+
+            });
+        </script>
     </main>
 
     <!--フッター-->
     <footer>
         <div class="footer_box">
-            <div class="footer_frame">
-                <img id="frame_top" src="images/frame2.png">
-                <img id="frame_right" src="images/frame1.png">
-                <img id="frame_left" src="images/frame1.png">
-                <img id="frame_bottom" src="images/frame2.png">
-            </div>
+            <img id="frame_top" src="images/frame2.png">
+            <img id="frame_right" src="images/frame1.png">
             <div class="footer_contact">
                 <div class="footer_txt">
-                    <h3 class="black_ttl"><span class="black_2s">PERSONAL STUDY</span>とは</h3>
+                    <h3 class="black_ttl"><span class="black_2s">PERSONAL <br class="none_pc">STUDY</span>とは</h3>
+                    <img class="none_pc location_img" src="images/location.jpg" alt="PERSONAL STUDY">
                     <p class="black_2">東京都文京区 小中高生対象の個別指導です。</p>
                     <p class="black_105">２０２０年 塾ナビ総合ランキング第１位<br>
                         <span class="black_space">個別指導部門第１位</span>
@@ -417,7 +473,7 @@
                         様々なお子様の指導経験と解決など噛みくだいた指導が、満足をいただいている証拠です。</p>
                 </div>
                 <div class="footer_img">
-                    <img id="location_img" src="images/location.jpg" alt="PERSONAL STUDY">
+                    <img class="none_mo location_img" src="images/location.jpg" alt="PERSONAL STUDY">
                     <div class="footer_lank">
                         <div class="message_lank1">
                             <img src="images/lank1.png" alt="2020年12月調べ">
@@ -430,10 +486,14 @@
                     </div>
                 </div>
             </div>
+            <img id="frame_left" src="images/frame1.png">
+            <img id="frame_bottom" src="images/frame2.png">
         </div>
         <!--HPへの案内-->
-        <div class="footer_link">
-            <a href="#">パーソナルスタディ ホームページはこちら</a>
+        <div class="footer_bottom">
+            <a href="#" class="footer_link footer_cover" target="_blank">
+                <span>パーソナルスタディ <br class="none_pc">ホームページはこちら</span>
+            </a>
         </div>
     </footer>
 
