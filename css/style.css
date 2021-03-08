@@ -308,22 +308,6 @@ main {
     line-height: 1.8em;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-
-    ::i-block-chrome,
-    .lank_center {
-        margin: auto 5px;
-    }
-
-    .lank_center p {
-        text-align: left;
-        font-size: 2em;
-        font-weight: bold;
-        letter-spacing: .1em;
-        line-height: 1.8em;
-    }
-}
-
 .lank_right {
     width: 180px;
     height: auto;
@@ -1479,6 +1463,32 @@ aside {
 .normal_pink {
     color: #fc546a;
     font-weight: bold;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    ::i-block-chrome,
+    .message_lank1 {
+        text-align: center;
+    }
+
+    .message_lank1 p {
+        text-align: center;
+    }
+
+    .message_lank2 {
+        display: flex;
+        justify-content: space-between;
+        width: 220px;
+        margin: 0 auto;
+    }
+
+    .message_lank2 p {
+        text-align: left;
+        font-size: 1em;
+        letter-spacing: .1em;
+        line-height: 1.8em;
+    }
 }
 
 @media screen and (max-width: 990px) {
