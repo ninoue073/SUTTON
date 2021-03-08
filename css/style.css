@@ -308,6 +308,22 @@ main {
     line-height: 1.8em;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    ::i-block-chrome,
+    .lank_center {
+        margin: auto 5px;
+    }
+
+    .lank_center p {
+        text-align: left;
+        font-size: 2em;
+        font-weight: bold;
+        letter-spacing: .1em;
+        line-height: 1.8em;
+    }
+}
+
 .lank_right {
     width: 180px;
     height: auto;
