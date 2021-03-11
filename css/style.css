@@ -306,6 +306,7 @@ main {
     font-weight: bold;
     letter-spacing: .1em;
     line-height: 1.8em;
+    width: 310px;
 }
 
 .lank_right {
@@ -1425,21 +1426,21 @@ aside {
     justify-content: space-between;
     width: 220px;
     margin: 0 auto;
-    height: 30px;
+    height: 35px;
 }
 
 .message_lank2 p {
     text-align: left;
     font-size: 1em;
     letter-spacing: .1em;
-    line-height: 1.8em;
+    line-height: 1.5em;
+    width: 160px;
 }
 
 .message_lank2 img {
     vertical-align: bottom;
     width: 60px;
     height: auto;
-    margin-bottom: 3px;
 }
 
 .message_txt {
