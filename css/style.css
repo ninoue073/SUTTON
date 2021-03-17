@@ -250,7 +250,7 @@ main {
 
 #num_font {
     font-size: 2em;
-    font-family: 'HoeflerText-Black', 'Sitka Small';
+    font-family: 'HoeflerText-Black', 'Sitka Small', 'Times New Roman';
 }
 
 .top_list {
@@ -1820,6 +1820,12 @@ footer {
 
     .none_pc {
         display: block;
+    }
+
+    @-moz-document url-prefix() {
+        #none_pc_fire {
+            display: none;
+        }
     }
 
     .location_img {
