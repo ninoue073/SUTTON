@@ -36,7 +36,7 @@
                     <h1>パーソナルスタディオンライン</h1>
                     <div class="header_info none_mo">
                         <p>平日・土曜 10:00~21:00</p>
-                        <p class="bold_013"><i class="fas fa-phone-alt fa-1x"></i> <span class="tel-link">0120-118-221</span></p>
+                        <p class="bold_013"><i class="fas fa-phone-alt fa-1x"></i> <span class="tel_link">0120-118-221</span></p>
                     </div>
                 </div>
 
@@ -57,7 +57,7 @@
 
             <div class="header_info none_pc">
                 <p>平日・土曜 10:00~21:00</p>
-                <p class="bold_013"><i class="fas fa-phone-alt fa-1x"></i> <span class="tel-link">0120-118-221</span></p>
+                <p class="bold_013"><i class="fas fa-phone-alt fa-1x"></i> <span class="tel_link">0120-118-221</span></p>
             </div>
 
 
@@ -172,7 +172,7 @@
                         <div id="tel_txt">
                             <p>お電話でのお問い合わせ</p>
                         </div>
-                        <p id="tel_num"><span class="tel-link">0120-187-703</span></p>
+                        <p id="tel_num"><span class="tel_link">0120-187-703</span></p>
                     </div>
                     <div id="tel_sc">
                         <p>平日・土曜 10:00~21:00</p>
@@ -184,7 +184,7 @@
                 $(function() {
                     var ua = navigator.userAgent;
                     if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) {
-                        $('.tel-link').each(function() {
+                        $('.tel_link').each(function() {
                             var str = $(this).text();
                             $(this).html($('<a>').attr('href', 'tel:' + str.replace(/-/g, '')).append(str + '</a>'));
                         });
