@@ -679,7 +679,7 @@ aside {
     padding-bottom: 5px;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 568px) {
 
     aside {
         padding: 30px 5px;
@@ -853,6 +853,7 @@ aside {
     right: 0;
     text-align: center;
     margin: 0 auto;
+    padding-left: 3%;
     max-width: 1250px;
 }
 
@@ -1038,8 +1039,14 @@ aside {
 
 @media screen and (max-width: 990px) {
 
+    .table_scroll {
+        overflow: auto;
+        white-space: nowrap;
+    }
+
     .difference_table {
-        padding-right: 20%;
+        padding-right: 15%;
+        width: 800px;
     }
 
     .tag_none {
@@ -1084,6 +1091,7 @@ aside {
 
     .difference_table {
         padding: 0 auto 0 0;
+        width: 400px;
     }
 
     .difference_table th {
@@ -1093,18 +1101,18 @@ aside {
     }
 
     .tag_none {
-        width: 67px;
+        width: 72px;
     }
 
     .tag_orange {
         padding: 8px 0 8px;
-        width: 56px;
+        width: 64px;
     }
 
     .tag_yellow {
         margin: 5px 2px 17px 1px;
         padding: 4px 5px;
-        width: 50px;
+        width: 55px;
     }
 
     .tag_yellow::before {
@@ -1114,7 +1122,7 @@ aside {
     .tag_green {
         margin: 5px 5px 17px 0;
         padding: 4px 2px;
-        width: 50px;
+        width: 55px;
     }
 
     .tag_green::before {
@@ -1122,7 +1130,7 @@ aside {
     }
 
     .label_blue {
-        width: 80px;
+        width: 84px;
         height: 28px;
         line-height: 28px;
         margin: 6px auto;
@@ -1131,21 +1139,21 @@ aside {
     }
 
     .check_orange {
-        width: 60px;
+        width: 70px;
         height: 40px;
         line-height: 40px;
         font-size: 20px;
     }
 
     .check_white {
-        width: 50px;
+        width: 55px;
         height: 40px;
         line-height: 40px;
         font-size: 16px;
     }
 
     .check_beige {
-        width: 50px;
+        width: 55px;
         height: 40px;
         line-height: 40px;
         font-size: 16px;
