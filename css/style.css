@@ -658,6 +658,7 @@ aside {
 
 .tel_inner p {
     font-size: 1.2em;
+    -webkit-text-size-adjust: 100%;
 }
 
 .tel_ve {
@@ -668,15 +669,18 @@ aside {
     display: inline-block;
     margin: auto 15px 0 0;
     padding-bottom: 5px;
+    white-space: nowrap;
 }
 
 #tel_num {
     font-size: 2em;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 #tel_sc {
     padding-bottom: 5px;
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 568px) {
