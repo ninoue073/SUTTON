@@ -1898,6 +1898,7 @@ main {
     display: flex;
     justify-content: space-between;
     margin: 50px auto;
+    height: 25vw;
     max-width: 1200px;
 }
 
@@ -1923,7 +1924,7 @@ main {
 .coach_img {
     width: 25%;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto auto;
 }
 
 @media screen and (max-width: 959px) {
@@ -1998,7 +1999,8 @@ main {
 
 .studio_img {
     width: 20%;
-    margin: 0 auto;
+    margin: 0 auto auto;
+    padding-top: 30px
 }
 
 @media screen and (max-width: 959px) {
@@ -2017,6 +2019,7 @@ main {
     .studio_img {
         width: 30%;
         margin: 0 auto;
+        padding-top: 0;
     }
 }
 
