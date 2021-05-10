@@ -1898,7 +1898,6 @@ main {
     display: flex;
     justify-content: space-between;
     margin: 50px auto;
-    height: 25vw;
     max-width: 1200px;
 }
 
@@ -1924,7 +1923,7 @@ main {
 .coach_img {
     width: 25%;
     height: auto;
-    margin: 0 auto auto;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 959px) {
@@ -1999,8 +1998,7 @@ main {
 
 .studio_img {
     width: 20%;
-    margin: 0 auto auto;
-    padding-top: 30px
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 959px) {
@@ -2019,7 +2017,6 @@ main {
     .studio_img {
         width: 30%;
         margin: 0 auto;
-        padding-top: 0;
     }
 }
 
@@ -4698,6 +4695,30 @@ main {
 
 /*-----------------------------*/
 
+.coming_soon {
+    background-color: #f3f3f3;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.coming_soon_box {
+    background-color: #fff;
+    display: inline-block;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.coming_soon_ttl {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.coming_soon_txt a {
+    color: #000;
+}
 
 /*----------フッター----------*/
 footer {
